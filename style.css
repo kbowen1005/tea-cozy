@@ -1,0 +1,177 @@
+html, body {
+	box-sizing: border-box;
+	font-family: Helvetica, sans-serif;
+	font-size: 22px;
+	color: seashell;
+	background-color: black;
+	opacity: 0.9;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header {
+	padding: 0 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	background-color: black;
+}
+
+header img {
+	height: 50px;
+}
+
+header nav ul li {
+	display: inline-block;
+	padding: 0 5px;
+}
+
+header nav ul li a {
+	color: seashell;
+}
+
+header nav ul li a:hover, header nav ul li a:active, header nav ul li a:focus {
+	text-decoration: none;
+}
+
+main {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: block;
+	padding-top: 69px;
+}
+
+#mission {
+	background-image: url(img/img-mission-background.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 700px;
+	display: flex;
+	align-items: center;
+}
+
+#mission .content {
+	background-color: black;
+	width: 100%;
+}
+
+#featuredTea {
+	max-width: 1000px;
+	margin: 60px auto;
+	display: block;
+}
+
+#featuredTea .tea-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#featuredTea .tea-wrap .tea:not(:nth-child(3)):not(:nth-child(5)) {
+	margin-right: 50px;
+}
+
+#featuredTea .tea-wrap .tea img {
+	width: 300px;
+}
+
+#locations {
+	background-image: url(img/img-locations-background.jpg);
+	background-size: cover;
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#locations h2 {
+	margin-bottom: 15px;
+}
+
+#locations .location-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#locations .location-wrap .location {
+	background-color: black;
+	width: 300px;
+}
+
+#locations .location-wrap .location:not(:last-child) {
+	margin-right: 40px;
+}
+
+#locations .location-wrap .location p {
+	line-height: 3rem;
+}
+
+#contact {
+	margin-bottom: 60px;
+}
+
+#contact h5 a {
+	color: seashell;
+	text-decoration: none;
+}
+
+footer {
+	margin: 0 20px;
+	text-align: left;
+	font-size: .75rem;
+}
+
+@media only screen and (max-width: 1000px) {
+	#featuredTea .tea-wrap .tea:not(:nth-child(3)):not(:nth-child(5)), #featuredTea .tea-wrap .tea {
+		margin: 0 12px;
+	}
+	#locations {
+		height: auto;
+		padding: 40px 0 20px;
+	}
+	#locations .location-wrap {
+		width: 100%;
+	}
+	#locations .location-wrap .location:not(:last-child), #locations .location-wrap .location {
+		margin: 20px;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	#mission {
+		height: 500px;
+		background-position: center;
+	}
+	#locations .location-wrap .location p {
+		font-size: .75rem;
+		line-height: 2rem;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	html, body {
+		font-size: 18px;
+	}
+	header img {
+		height: 30px;
+	}
+	main {
+		padding-top: 57px;
+	}
+	#mission {
+		height: 400px;
+	}
+}
